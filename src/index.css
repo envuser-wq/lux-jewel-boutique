@@ -130,16 +130,16 @@
   }
 
   .btn-elegant {
-    @apply bg-card border border-border text-card-foreground px-6 py-3 rounded-lg font-medium hover:bg-accent hover:shadow-soft transition-elegant;
+    @apply bg-card border border-border text-card-foreground px-6 py-3 rounded-lg font-medium hover:bg-accent hover:shadow-soft transition-all duration-300 ease-elegant;
   }
 
   .btn-ghost-luxury {
-    @apply bg-transparent border border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-elegant;
+    @apply bg-transparent border border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 ease-elegant;
   }
 
   /* Elegant Card Styles */
   .card-luxury {
-    @apply bg-card border border-border rounded-2xl shadow-soft hover:shadow-elegant transition-elegant overflow-hidden;
+    @apply bg-card border border-border rounded-2xl shadow-soft hover:shadow-elegant transition-all duration-300 ease-elegant overflow-hidden;
   }
 
   .card-product {
@@ -170,6 +170,6 @@
 
   /* Luxury Form Elements */
   .input-luxury {
-    @apply bg-background border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-elegant;
+    @apply bg-background border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 ease-elegant;
   }
 }
