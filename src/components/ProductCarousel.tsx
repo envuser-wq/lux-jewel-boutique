@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, Heart, ShoppingBag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -131,10 +132,11 @@ export const ProductCarousel = () => {
               }}
             >
               {products.map((product, index) => (
-                <div
+                <Link
                   key={product.id}
+                  to={`/product/${product.id}`}
                   className={cn(
-                    "group cursor-pointer card-product animate-fade-in",
+                    "group cursor-pointer card-product animate-fade-in block",
                     index >= currentIndex && index < currentIndex + itemsPerView.desktop 
                       ? "opacity-100" : "opacity-90"
                   )}
@@ -191,7 +193,7 @@ export const ProductCarousel = () => {
                       )}
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
