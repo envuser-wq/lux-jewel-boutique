@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Reviews } from "@/components/Reviews";
+import { TrustIndicators } from "@/components/TrustIndicators";
+import { FAQ } from "@/components/FAQ";
 import { cn } from "@/lib/utils";
 
 // Product data (in a real app, this would come from an API)
@@ -314,6 +317,23 @@ export const ProductDetails = () => {
               </Card>
             </div>
           </div>
+        </div>
+
+        {/* Additional Product Information */}
+        <div className="mt-20 space-y-16">
+          {/* Product Reviews */}
+          <div>
+            <h2 className="text-3xl font-heading font-bold mb-8 text-center">
+              Customer <span className="text-luxury">Reviews</span>
+            </h2>
+            <Reviews productSpecific={true} limit={4} />
+          </div>
+
+          {/* Trust Indicators */}
+          <TrustIndicators variant="metrics" compact={false} />
+
+          {/* FAQ Section */}
+          <FAQ limit={4} />
         </div>
       </main>
 
