@@ -126,7 +126,8 @@
 @layer components {
   /* Luxury Button Variants */
   .btn-luxury {
-    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-8 py-4 rounded-lg font-medium tracking-wide shadow-elegant hover:shadow-rose-glow transition-all duration-300 hover:scale-105;
+    background: var(--gradient-rose-gold);
+    @apply text-primary-foreground px-8 py-4 rounded-lg font-medium tracking-wide shadow-elegant hover:shadow-rose-glow transition-all duration-300 hover:scale-105;
   }
 
   .btn-elegant {
@@ -148,7 +149,10 @@
 
   /* Premium Text Styles */
   .text-luxury {
-    @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
+    background: var(--gradient-rose-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .text-heading {
