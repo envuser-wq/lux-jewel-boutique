@@ -127,24 +127,77 @@
   /* Luxury Button Variants */
   .btn-luxury {
     background: var(--gradient-rose-gold);
-    @apply text-primary-foreground px-8 py-4 rounded-lg font-medium tracking-wide shadow-elegant hover:shadow-rose-glow transition-all duration-300 hover:scale-105;
+    color: hsl(var(--primary-foreground));
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    box-shadow: var(--shadow-elegant);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btn-luxury:hover {
+    box-shadow: var(--shadow-rose-glow);
+    transform: scale(1.05);
   }
 
   .btn-elegant {
-    @apply bg-card border border-border text-card-foreground px-6 py-3 rounded-lg font-medium hover:bg-accent hover:shadow-soft transition-all duration-300 ease-elegant;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    color: hsl(var(--card-foreground));
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btn-elegant:hover {
+    background: hsl(var(--accent));
+    box-shadow: var(--shadow-soft);
   }
 
   .btn-ghost-luxury {
-    @apply bg-transparent border border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-300 ease-elegant;
+    background: transparent;
+    border: 1px solid hsl(var(--primary));
+    color: hsl(var(--primary));
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btn-ghost-luxury:hover {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
   }
 
   /* Elegant Card Styles */
   .card-luxury {
-    @apply bg-card border border-border rounded-2xl shadow-soft hover:shadow-elegant transition-all duration-300 ease-elegant overflow-hidden;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 1rem;
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-luxury:hover {
+    box-shadow: var(--shadow-elegant);
   }
 
   .card-product {
-    @apply card-luxury cursor-pointer hover:scale-[1.02] transition-all duration-500;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 1rem;
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-product:hover {
+    box-shadow: var(--shadow-elegant);
+    transform: scale(1.02);
   }
 
   /* Premium Text Styles */
@@ -156,24 +209,29 @@
   }
 
   .text-heading {
-    @apply font-heading font-semibold tracking-tight;
-  }
-
-  /* Smooth Animations */
-  .fade-in {
-    @apply animate-in fade-in duration-700;
-  }
-
-  .slide-up {
-    @apply animate-in slide-in-from-bottom-8 duration-700;
-  }
-
-  .elegant-hover {
-    @apply hover:scale-105 hover:shadow-elegant transition-all duration-300;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: -0.025em;
   }
 
   /* Luxury Form Elements */
   .input-luxury {
-    @apply bg-background border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 ease-elegant;
+    background: hsl(var(--background));
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: hsl(var(--foreground));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .input-luxury::placeholder {
+    color: hsl(var(--muted-foreground));
+  }
+  
+  .input-luxury:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: hsl(var(--primary));
+    border-color: transparent;
   }
 }
